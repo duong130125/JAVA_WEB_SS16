@@ -2,6 +2,7 @@ package ra.session_16.controller;
 
 import com.cloudinary.Cloudinary;
 import com.cloudinary.utils.ObjectUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import ra.session_16.dto.TripDto;
 import ra.session_16.model.Trip;
 import ra.session_16.service.TripServiceImp;
@@ -17,9 +18,11 @@ import java.util.Map;
 
 @Controller
 public class TripController {
+
     private final Cloudinary cloudinary;
     public TripServiceImp tripServiceImp = new TripServiceImp();
 
+    @Autowired
     public TripController(Cloudinary cloudinary) {
         this.cloudinary = cloudinary;
     }

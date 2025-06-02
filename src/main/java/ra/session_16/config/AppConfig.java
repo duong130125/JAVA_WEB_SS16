@@ -1,5 +1,7 @@
 package ra.session_16.config;
 
+import com.cloudinary.Cloudinary;
+import com.cloudinary.utils.ObjectUtils;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -19,6 +21,10 @@ import org.thymeleaf.templatemode.TemplateMode;
         "ra.session_16.repository",
 })
 public class AppConfig implements WebMvcConfigurer {
+    // cloudinary
+    private String HOST_NAME = "dbasiaiks";
+    private String API_KEY = "852926152316177";
+    private String API_SECRET = "wLd8s3ZLy1ldlSqJDSs3pgf5xTQ";
 
     @Bean
     public SpringResourceTemplateResolver springResourceTemplateResolver() {
@@ -48,6 +54,16 @@ public class AppConfig implements WebMvcConfigurer {
         return thymeleafViewResolver;
     }
 
+    // cloudinary
+    @Bean
+    public Cloudinary cloudinary() {
+        return new Cloudinary(ObjectUtils.asMap(
+                "cloud_name", HOST_NAME,
+                "api_key", API_KEY,
+                "api_secret", API_SECRET,
+                "secure", true
+        ));
+    }
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {

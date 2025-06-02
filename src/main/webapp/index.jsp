@@ -7,6 +7,6 @@
 <body>
 <h1>Trang chủ xin chào mời vào trang đăng nhâp!!</h1>
 <br/>
-<a href="login">Login</a>
+<a href="login">Vào trang đăng nhập:))</a>
 </body>
 </html>
