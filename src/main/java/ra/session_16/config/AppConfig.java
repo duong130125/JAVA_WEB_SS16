@@ -1,4 +1,4 @@
-package ra.session_15.config;
+package ra.session_16.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -14,9 +14,9 @@ import org.thymeleaf.templatemode.TemplateMode;
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages = {
-        "ra.session_15.controller",
-        "ra.session_15.service",
-        "ra.session_15.repository",
+        "ra.session_16.controller",
+        "ra.session_16.service",
+        "ra.session_16.repository",
 })
 public class AppConfig implements WebMvcConfigurer {
 

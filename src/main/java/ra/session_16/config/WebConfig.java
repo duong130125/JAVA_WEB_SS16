@@ -1,9 +1,8 @@
-package ra.session_15.config;
+package ra.session_16.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 public class WebConfig extends AbstractAnnotationConfigDispatcherServletInitializer {
-
 
     @Override
     protected Class<?>[] getRootConfigClasses() {
